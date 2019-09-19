@@ -35,6 +35,7 @@ func Balloon(n string) int {
 	nUpper:= strings.ToUpper(n)
 	s := strings.Split(nUpper, "")
 
+
 	for _,v := range s {
 		if inArray(v, ball) == true {
 			balloon[v]++

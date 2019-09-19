@@ -41,10 +41,18 @@ func Martin(a string, b string) string {
 	for i:=0; i<awal; i++ {
 		result += s[i]
 		q++
-		if q==2 && w<akhir{
-			result += t[w]
-			w++
-			q=0
+		if akhir>awal/2 {
+			if q==1 && w<akhir{
+				result += t[w]
+				w++
+				q=0
+			}
+		} else {
+			if q==2 && w<akhir{
+				result += t[w]
+				w++
+				q=0
+			}
 		}
 	}
 
@@ -53,7 +61,7 @@ func Martin(a string, b string) string {
 }
 
 func main() {
-	test := Martin("AAAAAA", "BB")
+	test := Martin("AAAAAA", "BBBBBB")
 
 	fmt.Println(test)
 }

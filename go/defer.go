@@ -1,13 +1,16 @@
 package main
 
-import "fmt"
+import (
+    "fmt"
+    "os"
+)
 //import "os"
 
 func main() {
     
     fmt.Println("selamat datang")
 
-    //os.Exit(1)
+    os.Exit(100)
 
     defer fmt.Println("test")
     defer fmt.Println("halo")
